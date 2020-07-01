@@ -4155,7 +4155,7 @@
 
             response, err := Client.RevokeSessionsFromAllUsers()
 
-  /users/{user_id}/typing:
+  "/users/{user_id}/typing":
     post:
       tags:
         - users
@@ -4168,7 +4168,13 @@
         ##### Permissions
 
         Must have `manage_system` permission to publish for any user other than oneself.
-
+      parameters:
+        - name: user_id
+          in: path
+          description: User GUID
+          required: true
+          schema:
+            type: string
       requestBody:
         content:
           application/json:

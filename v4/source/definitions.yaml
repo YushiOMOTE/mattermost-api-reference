@@ -2370,38 +2370,6 @@ components:
           type: string
         is_id_loaded:
           type: boolean
-    PluginStatus:
-      type: object
-      properties:
-        plugin_id:
-          type: string
-          description: Globally unique identifier that represents the plugin.
-        name:
-          type: string
-          description: Name of the plugin.
-        description:
-          type: string
-          description: Description of what the plugin is and does.
-        version:
-          type: string
-          description: Version number of the plugin.
-        cluster_id:
-          type: string
-          description: ID of the cluster in which plugin is running
-        plugin_path:
-          type: string
-          description: Path to the plugin on the server
-        state:
-          type: number
-          description: State of the plugin
-          enum:
-            - NotRunning
-            - Starting
-            - Running
-            - FailedToStart
-            - FailedToStayRunning
-            - Stopping
-
 
     PluginManifestWebapp:
       type: object
